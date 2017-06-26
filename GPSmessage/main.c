@@ -8,22 +8,21 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define N 10000
 int main()
 {
         int i;
         FILE *fp;
-        char str1[65];
-        char str2[65];
-        char lat[9];
-        char speed[6];
-        char lat2[10];
-        char deg[6];
-        char time1[7];
-        char time[7];
-        char state[2];
-        char num[3];
-        char high[5];
+        char str1[65];      //第一行数据
+        char str2[65];      //第二行数据
+        char lat[9];        //纬度
+        char speed[6];      //地面速率
+        char lat2[10];      //经度
+        char deg[6];        //地面航向
+        char time1[7];      //UTC日期
+        char time[7];       //UTC时间
+        char state[2];      //GPS状态
+        char num[3];        //卫星数量
+        char high[5];       //海拔高度
         fp=fopen("//Users//a20161104591//Desktop//GPSmessage//GPS170510.txt","r+");
         fscanf(fp,"%s%s",str1,str2);
         printf("%s\n%s\n",str1,str2);
